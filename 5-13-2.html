@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            width: 100%;
+            height: 50px;
+            background-color: rgb(219, 216, 216);
+            border: 1px solid black;
+        }
+        .section, .section2, .section3{
+            display: none;
+        } 
+        p{
+            margin-top: 2px;
+            background-color: antiquewhite;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <button class="btn" onclick="openSection()">Section1</button>
+    <div class="section">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo a, ex libero voluptatibus ea eos commodi quibusdam ipsam quos rem inventore ullam quae atque quod magni non quaerat labore molestiae!</p>
+    </div>
+
+    <script>
+        const section = document.querySelector(".section");
+        function openSection(){
+            section.style.backgroundColor = 'grey';
+            if(section.style.display === 'block') section.style.display = 'none';
+            else section.style.display = 'block'
+        }
+    </script>
+
+
+    <button class="btn" onclick="openSection2()">Section2</button>
+    <div class="section2">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo a, ex libero voluptatibus ea eos commodi </p>
+    </div>
+
+    <script>
+        const section2 = document.querySelector(".section2");
+        function openSection2(){
+            section2.style.backgroundColor = 'grey';
+            if(section2.style.display === 'block') section2.style.display = 'none';
+            else section2.style.display = 'block'
+        }
+    </script>
+
+
+    <button class="btn" onclick="openSection3()">Section3</button>
+    <div class="section3">
+        <p>Lorem ipsum dolor sit amet, consectetur p>
+    </div>
+
+    <script>
+        const section3 = document.querySelector(".section3");
+        function openSection3(){
+            section3.style.backgroundColor = 'grey';
+            if(section3.style.display === 'block') section3.style.display = 'none';
+            else section3.style.display = 'block'
+        }
+    </script>
+
+</html>

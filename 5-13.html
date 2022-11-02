@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .container{
+        width: 100%;
+        height: 100vh;
+        background-color: greenyellow;
+        display: flex;
+        justify-content: center;
+        gap: 100px;
+        align-items: flex-start;
+    }
+    button{
+        background-color: white;
+        border: none;
+        border-radius: 3rem;
+        width: 10%;
+        height: 5%;
+    
+    }
+    .modal, .modal2, .modal3{
+        display: none;
+        position: fixed;
+        z-index: 1;
+        top: 10%;
+        left: 40%;
+        width: 250px;
+        height: 200px;
+    }
+    .modal-content{
+        position: relative;
+        background-color: white;
+        margin: 15% auto;
+        padding: 20px;
+        border: none;
+        border-radius: 30px;
+        width: 80%;
+    }
+    .close, .close2, .close3{
+        color: #aaa;
+        float: right;
+        font-size:28px;
+        font-weight: bold;
+    }
+    .close:hover, .close2:hover, .close3:hover{
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    h1{
+        text-align: center;
+    }
+</style>
+<body>
+    <div class="container">
+        <button id="modal-btn" >Show Modal1</button>
+        <div class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h1>Modal1</h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores accusantium deserunt maxime laudantium. Impedit, necessitatibus!</p>
+            </div>
+        </div>
+        <button id="modal-btn2" >Show Modal2</button>
+        <div class="modal2">
+            <div class="modal-content" style="background-color: green;">
+                <span class="close2">&times;</span>
+                <h1>Modal2</h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores accusantium deserunt maxime laudantium. Impedit, necessitatibus!</p>
+            </div>
+        </div>
+        <button id="modal-btn3" >Show Modal3</button>
+        <div class="modal3">
+            <div class="modal-content" style="background-color: yellow;">
+                <span class="close3">&times;</span>
+                <h1>Modal3</h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores accusantium deserunt maxime laudantium. Impedit, necessitatibus!</p>
+            </div>
+        </div>
+    </div>
+
+    <script >
+        const modalBtn = document.getElementById("modal-btn");
+        const modal = document.querySelector(".modal");
+        const close = document.querySelector(".close");
+        modalBtn.onclick = function(){
+            modal.style.display = "block"
+        }
+
+        close.onclick = function(){
+            modal.style.display = "none"
+        }
+
+        window.onclick = function(e){
+            if(e.target == modal){
+                modal.style.display = "none"
+            }
+        }
+
+
+        const modalBtn2 = document.getElementById("modal-btn2");
+        const modal2 = document.querySelector(".modal2");
+        const close2 = document.querySelector(".close2");
+        modalBtn2.onclick = function(){
+            modal2.style.display = "block"
+        }
+
+        close2.onclick = function(){
+            modal2.style.display = "none"
+        }
+
+        window.onclick = function(e){
+            if(e.target == modal2){
+                modal2.style.display = "none"
+            }
+        }
+
+
+        const modalBtn3 = document.getElementById("modal-btn3");
+        const modal3 = document.querySelector(".modal3");
+        const close3 = document.querySelector(".close3");
+        modalBtn3.onclick = function(){
+            modal3.style.display = "block"
+        }
+
+        close3.onclick = function(){
+            modal3.style.display = "none"
+        }
+
+        window.onclick = function(e){
+            if(e.target == modal3){
+                modal3.style.display = "none"
+            }
+        }
+    </script>
+</body>
+</html>
